@@ -1,0 +1,8 @@
+# Up arrow - searches backwards
+"\e[A": history-search-backward
+# # Down arrow - searches forwards
+"\e[B": history-search-forward
+
+set show-all-if-ambiguous on
+set completion-ignore-case on
+
