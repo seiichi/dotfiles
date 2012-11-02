@@ -9,3 +9,9 @@
 
 [include]
   path = ~/.git-github
+
+[alias]
+
+  # push
+  pom = push origin master
+
