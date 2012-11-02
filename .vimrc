@@ -97,7 +97,7 @@ au FileType ruby set expandtab ts=2 sw=2 sts=2
 au FileType perl set expandtab ts=2 sw=2 sts=2
 au FileType python set expandtab ts=5 sw=4 sts=4
 au FileType sh set expandtab ts=2 sw=2 sts=2
-au FileType css set expandtab ts=2 sw=2 sts=2 fenc=utf-8
+au FileType css set expandtab ts=2 sw=2 sts=2
 au FileType htmlcheetah set expandtab ts=2 sw=2 sts=2
 au FileType html set expandtab ts=2 sw=2 sts=2
 au FileType xhtml set expandtab ts=2 sw=2 sts=2
