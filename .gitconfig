@@ -1,0 +1,15 @@
+# vim: ts=2:sw=2:sts=2:et
+
+[user]
+  name = Seiichi SATO
+  email = seiichisato@gmail.com
+[core]
+  excludesfile = /Users/seiichi/.gitignore_global
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
+[include]
+  path = ~/.git-github
