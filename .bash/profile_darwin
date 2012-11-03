@@ -6,7 +6,7 @@ if [ -f /usr/local/Cellar/coreutils/8.12/aliases ] ; then
   . /usr/local/Cellar/coreutils/8.12/aliases
 fi
 
-alias ls='gls --color'
+alias ls='gls --color=auto'
 alias tar='gnutar'
 alias vim='mvim -v'
 alias gvim='mvim'
