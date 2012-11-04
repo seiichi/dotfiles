@@ -11,6 +11,6 @@ alias tar='gnutar'
 alias vim='mvim -v'
 alias gvim='mvim'
 
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+PATH_DARWIN=/usr/local/bin:/usr/local/sbin
 
 # vim: ft=sh
