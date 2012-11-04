@@ -4,3 +4,4 @@
 # do not ignore:
 !.vim/
 !.bash/
+!bin/
