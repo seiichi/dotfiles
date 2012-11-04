@@ -10,7 +10,7 @@ Linux)
   ;;
 esac
 
-export PATH=$PATH_DARWIN:~/Dropbox/bin/:$PATH
+export PATH=$PATH_DARWIN:~/bin/:~/Dropbox/bin/:$PATH
 
 # http://www.andrewvos.com/2011/07/25/showing-git-status-in-your-bash-prompt/
 function git_prompt {
