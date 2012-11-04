@@ -10,23 +10,15 @@ Linux)
   ;;
 esac
 
-export PATH=$PATH_DARWIN:~/bin/:~/Dropbox/bin/:$PATH
-
-# http://www.andrewvos.com/2011/07/25/showing-git-status-in-your-bash-prompt/
-function git_prompt {
-  local STATUS=`git status 2>&1`
-  if [[ "$STATUS" == *'Not a git repository'* ]] ; then
-    echo ""
-  else
-    if [[ "$STATUS" == *'working directory clean'* ]] ; then
-      echo ""
-    else
-      echo -e '\033[0;31m+\033[m'
-    fi
-  fi
-}
-PS1='\u@\h:\w$(git_prompt)\$ '
+# prompt
+PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
+GIT_PS1_SHOWUPSTREAM=1
+GIT_PS1_SHOWUNTRACKEDFILES=1
+GIT_PS1_SHOWDIRTYSTATE=1
+PS1='\u@\h:\w $(__git_ps1 "(git:%s)")\$ '
 
 export HISTFILESIZE=65535
+export PATH=$PATH_DARWIN:~/bin/:~/Dropbox/bin/:$PATH
+export EDITOR=vim
 
 # vim: ft=sh
