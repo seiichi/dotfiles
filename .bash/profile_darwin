@@ -9,6 +9,8 @@ fi
 alias ls='gls --color=auto'
 alias tar='gnutar'
 alias vim='mvim -v'
+alias vimdiff='mvimdiff -v'
+alias view='mview -v'
 alias gvim='mvim'
 
 PATH_DARWIN=/usr/local/bin:/usr/local/sbin
