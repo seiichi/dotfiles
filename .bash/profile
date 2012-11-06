@@ -10,12 +10,20 @@ Linux)
   ;;
 esac
 
+function _ps1_host {
+  if [ "x$SSH_TTY" = x ] ; then
+    echo ""
+  else
+    echo -e "\e[33m"
+  fi
+}
+
 # prompt
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
 GIT_PS1_SHOWUPSTREAM=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWDIRTYSTATE=1
-PS1='\u@\h:\w $(__git_ps1 "(git:%s)")\$ '
+PS1='\u@\[$(_ps1_host)\]\h\[\e[m\]:\w $(__git_ps1 "(git:%s)")\$ '
 
 export HISTFILESIZE=65535
 export PATH=$PATH_DARWIN:~/bin/:~/Dropbox/bin/:$PATH
