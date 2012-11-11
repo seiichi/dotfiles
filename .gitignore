@@ -6,3 +6,7 @@
 !.bash/
 !.hgrc.d/
 !bin/
+
+# ignore
+.vim/.netrwhist
+.vim/bundle

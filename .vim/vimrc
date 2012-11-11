@@ -124,3 +124,17 @@ EOF
 endif
 "}}}
 
+" Vundle {{{
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+" my bundles:
+Bundle 'kakkyz81/evervim'
+
+filetype plugin indent on
+" }}}
