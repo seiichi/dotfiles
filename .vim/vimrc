@@ -134,7 +134,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " my bundles:
-Bundle 'kakkyz81/evervim'
+"Bundle 'kakkyz81/evervim'
 
 filetype plugin indent on
 " }}}
