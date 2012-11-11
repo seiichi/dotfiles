@@ -22,6 +22,7 @@
 
 import os
 import sys
+import urllib
 import urllib2
 import json
 
@@ -32,6 +33,7 @@ def apikey():
     return open(_API_KEY).read().strip()
 
 def add_new_action(key, name):
+    name = urllib.quote(name)
     url = '%s/newaction/name-%s/what-next/key-%s' % (_BASE_URL, name, key)
     try:
         u = urllib2.urlopen(url)
