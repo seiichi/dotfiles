@@ -2,6 +2,8 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
+PATH_DARWIN=/usr/local/bin:/usr/local/sbin
+
 if [ -f /usr/local/Cellar/coreutils/8.12/aliases ] ; then
   . /usr/local/Cellar/coreutils/8.12/aliases
 fi
@@ -12,7 +14,5 @@ alias vim='mvim -v'
 alias vimdiff='mvimdiff -v'
 alias view='mview -v'
 alias gvim='mvim'
-
-PATH_DARWIN=/usr/local/bin:/usr/local/sbin
 
 # vim: ft=sh

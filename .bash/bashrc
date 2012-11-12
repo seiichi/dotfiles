@@ -1,3 +1,34 @@
+# OS-specific stuff
+UNAME=`uname`
+case $UNAME in
+Darwin)
+  . ~/.bash/bashrc_darwin
+  ;;
+Linux)
+  . ~/.bash/bashrc_linux
+  ;;
+*)
+  ;;
+esac
+
+export HISTFILESIZE=65535
+export PATH=$PATH_DARWIN:~/bin/:~/Dropbox/bin/:$PATH
+export EDITOR=vim
+
+# prompt
+function _ps1_host {
+  if [ "x$SSH_TTY" = x ] ; then
+    echo ""
+  else
+    echo -e "\e[33m"
+  fi
+}
+PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
+GIT_PS1_SHOWUPSTREAM=1
+GIT_PS1_SHOWUNTRACKEDFILES=1
+GIT_PS1_SHOWDIRTYSTATE=1
+PS1='\u@\[$(_ps1_host)\]\h\[\e[m\]:\w $(__git_ps1 "(git:%s)")\$ '
+
 # color support of ls
 if [ "$TERM" != "dumb" ] && which dircolors > /dev/null; then
   eval "`dircolors -b`"
@@ -7,3 +38,4 @@ fi
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
+

@@ -1,3 +1,1 @@
-if [ -f ~/.bash/profile ] ; then
-  . ~/.bash/profile
-fi
+[ -f ~/.bash/bashrc ] && . ~/.bash/bashrc
