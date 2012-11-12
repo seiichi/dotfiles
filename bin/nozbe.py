@@ -49,6 +49,8 @@ def show_next_actions(key):
         u = urllib2.urlopen(url)
         actions = json.loads(u.read())
         for i, act in enumerate(actions):
+            if act['done']:
+                continue
             print act['name']
     except urllib2.URLError, e:
         print 'failed to access the server [%s]' % (e)
