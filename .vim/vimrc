@@ -17,12 +17,6 @@ let g:is_posix = 1                " to use modern shell
 let mapleader = ','
 
 set tags=./tags;$HOME
-
-if has('gui_running')
-  if has('gui_macvim')
-    set guifont=Ricty\ Regular\ for\ Powerline:h14
-  endif
-endif
 " }}}
 
 " Formatting {{{
@@ -82,11 +76,11 @@ map <silent> <leader>L :set invlist<CR>
 
 " status line
 set laststatus=2
-set statusline=%<%f\              " custom statusline
-set stl+=[%{&ff}]                 " show fileformat
-set stl+=[%{&fileencoding}]       " show fileencoding
-set stl+=%y%m%r%=
-set stl+=%-14.(%l,%c%V%)\ %P
+"set statusline=%<%f\              " custom statusline
+"set stl+=[%{&ff}]                 " show fileformat
+"set stl+=[%{&fileencoding}]       " show fileencoding
+"set stl+=%y%m%r%=
+"set stl+=%-14.(%l,%c%V%)\ %P
 "}}}
 
 " Folding {{{
@@ -116,14 +110,6 @@ if exists('&colorcolumn')
   au FileType sh,c,python,javascript,php setlocal colorcolumn=+1 tw=80
 endif
 "}}}
-
-" Powerline {{{
-if has('gui_running')
-  if has('gui_macvim')
-    let g:Powerline_symbols = 'fancy'
-  endif
-endif
-" }}}
 
 " reload firefox {{{
 if has('python')

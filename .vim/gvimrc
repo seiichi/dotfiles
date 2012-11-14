@@ -2,12 +2,6 @@
 colorscheme wombat
 
 if has('gui_macvim')
-  set guifont=Ricty\ Regular\ for\ Powerline:h14
-endif
-" }}}
-
-" Powerline {{{
-if has('gui_macvim')
-  let g:Powerline_symbols = 'fancy'
+  set guifont=Ricty\ Regular:h14
 endif
 " }}}
