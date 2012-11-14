@@ -11,10 +11,18 @@ set nowritebackup
 set modeline
 set modelines=5
 
+set t_Co=256
+
 let g:is_posix = 1                " to use modern shell
 let mapleader = ','
 
 set tags=./tags;$HOME
+
+if has('gui_running')
+  if has('gui_macvim')
+    set guifont=Ricty\ Regular\ for\ Powerline:h14
+  endif
+endif
 " }}}
 
 " Formatting {{{
@@ -109,6 +117,14 @@ if exists('&colorcolumn')
 endif
 "}}}
 
+" Powerline {{{
+if has('gui_running')
+  if has('gui_macvim')
+    let g:Powerline_symbols = 'fancy'
+  endif
+endif
+" }}}
+
 " reload firefox {{{
 if has('python')
   function! FirefoxReload()
@@ -135,6 +151,7 @@ Bundle 'gmarik/vundle'
 
 " my bundles:
 "Bundle 'kakkyz81/evervim'
+Bundle 'Lokaltog/vim-powerline'
 
 filetype plugin indent on
 " }}}
