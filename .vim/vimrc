@@ -108,6 +108,7 @@ au FileType vim set expandtab ts=2 sw=2 sts=2
 " 80 column layout - http://vim-users.jp/2011/05/hack217/
 if exists('&colorcolumn')
   au FileType sh,c,python,javascript,php setlocal colorcolumn=+1 tw=80
+  au FileType help setlocal colorcolumn=+1 tw=78
 endif
 "}}}
 
@@ -136,7 +137,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " my bundles:
-"Bundle 'kakkyz81/evervim'
 Bundle 'Lokaltog/vim-powerline'
 
 filetype plugin indent on
