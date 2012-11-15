@@ -23,11 +23,16 @@ function _ps1_host {
     echo -e "\e[33m"
   fi
 }
-PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
-GIT_PS1_SHOWUPSTREAM=1
-GIT_PS1_SHOWUNTRACKEDFILES=1
-GIT_PS1_SHOWDIRTYSTATE=1
-PS1='\u@\[$(_ps1_host)\]\h\[\e[m\]:\w $(__git_ps1 "(git:%s)")\$ '
+if [ "x$TERM" = xdumb ] ; then
+  PS1='\u@\h:\w \$ '
+  PROMPT_COMMAND=''
+else
+  PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
+  GIT_PS1_SHOWUPSTREAM=1
+  GIT_PS1_SHOWUNTRACKEDFILES=1
+  GIT_PS1_SHOWDIRTYSTATE=1
+  PS1='\u@\[$(_ps1_host)\]\h\[\e[m\]:\w $(__git_ps1 "(git:%s)")\$ '
+fi
 
 # color support of ls
 if [ "$TERM" != "dumb" ] && which dircolors > /dev/null; then
