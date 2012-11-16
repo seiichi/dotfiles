@@ -94,6 +94,7 @@ set foldopen+=quickfix
 "}}}
 
 " FileType {{{
+set expandtab ts=8 sw=8 sts=8                      " default
 au FileType javascript set expandtab ts=4 sw=4 sts=4
 au FileType ruby set expandtab ts=2 sw=2 sts=2
 au FileType perl set expandtab ts=2 sw=2 sts=2
@@ -104,10 +105,11 @@ au FileType htmlcheetah set expandtab ts=2 sw=2 sts=2
 au FileType html set expandtab ts=2 sw=2 sts=2
 au FileType xhtml set expandtab ts=2 sw=2 sts=2
 au FileType vim set expandtab ts=2 sw=2 sts=2
+au FileType php set expandtab ts=8 sw=8 sts=8
 
 " 80 column layout - http://vim-users.jp/2011/05/hack217/
 if exists('&colorcolumn')
-  au FileType sh,c,python,javascript,php setlocal colorcolumn=+1 tw=80
+  au FileType sh,c,python,javascript setlocal colorcolumn=+1 tw=80
   au FileType help setlocal colorcolumn=+1 tw=78
 endif
 "}}}
