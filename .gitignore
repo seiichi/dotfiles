@@ -6,6 +6,7 @@
 !.bash/
 !.hgrc.d/
 !bin/
+!.tmux.conf
 
 # ignore
 .vim/.netrwhist
