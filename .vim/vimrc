@@ -139,14 +139,23 @@ Bundle 'gmarik/vundle'
 " my bundles:
 Bundle 'Lokaltog/vim-powerline'
 if has('python')
-Bundle 'seiichi/nozbeadd.vim'
+  Bundle 'seiichi/nozbeadd.vim'
 endif
-Bundle 'wombat256.vim'
-Bundle 'Wombat'
+Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on
 " }}}
 
-" color scheme {{{
-colorscheme wombat256mod
+" appearance {{{
+if has('gui_macvim')
+  set transparency=4
+  set guifont=Ricty\ Regular:h12
+endif
+
+colorscheme solarized
+if has('gui_running')
+  set background=light
+else
+  set background=dark
+endif
 " }}}

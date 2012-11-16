@@ -1,8 +1,0 @@
-" General {{{
-colorscheme wombat
-
-if has('gui_macvim')
-  set transparency=4
-  set guifont=Ricty\ Regular:h12
-endif
-" }}}
