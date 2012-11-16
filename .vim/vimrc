@@ -138,7 +138,9 @@ Bundle 'gmarik/vundle'
 
 " my bundles:
 Bundle 'Lokaltog/vim-powerline'
+if has('python')
 Bundle 'seiichi/nozbeadd.vim'
+endif
 Bundle 'wombat256.vim'
 Bundle 'Wombat'
 
