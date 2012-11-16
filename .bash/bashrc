@@ -35,12 +35,16 @@ else
 fi
 
 # color support of ls
-if [ "$TERM" != "dumb" ] && which dircolors > /dev/null; then
+if [ -r ~/.bash/dircolors.256dark ] ; then
+  # https://github.com/seebi/dircolors-solarized
+  eval "`dircolors ~/.bash/dircolors.256dark`"
+else
   eval "`dircolors -b`"
+fi
+if [ "$TERM" != "dumb" ] && which dircolors > /dev/null; then
   alias ls='ls --color=auto'
 fi
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
-
