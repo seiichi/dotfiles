@@ -58,7 +58,6 @@ set ambiwidth=double
 
 " Visual {{{
 syntax on
-colorscheme default
 
 set mouse=a
 set mousehide                     " hide mouse after chars typed
@@ -140,6 +139,12 @@ Bundle 'gmarik/vundle'
 " my bundles:
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'seiichi/nozbeadd.vim'
+Bundle 'wombat256.vim'
+Bundle 'Wombat'
 
 filetype plugin indent on
+" }}}
+
+" color scheme {{{
+colorscheme wombat256mod
 " }}}
