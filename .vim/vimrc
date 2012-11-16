@@ -138,6 +138,7 @@ Bundle 'gmarik/vundle'
 
 " my bundles:
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'seiichi/nozbeadd.vim'
 
 filetype plugin indent on
 " }}}
