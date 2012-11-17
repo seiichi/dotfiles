@@ -150,7 +150,7 @@ filetype plugin indent on
 " appearance {{{
 if has('gui_macvim')
   set transparency=4
-  set guifont=Ricty\ Regular:h12
+  set guifont=Ricty\ Regular\ for\ Powerline:h12
 endif
 
 colorscheme solarized
@@ -160,6 +160,8 @@ else
   set background=dark
 endif
 " }}}
+
+let g:Powerline_symbols = 'fancy'
 
 " w3m.vim {{{
 if executable("/usr/bin/w3m")
