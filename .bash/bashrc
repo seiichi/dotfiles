@@ -12,7 +12,7 @@ Linux)
 esac
 
 export HISTFILESIZE=65535
-export PATH=~/bin/:~/Dropbox/bin/:$PATH_DARWIN:$PATH
+export PATH=~/bin:~/Dropbox/bin:$PATH_DARWIN:$PATH
 export EDITOR=vim
 
 # prompt
