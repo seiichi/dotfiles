@@ -12,7 +12,7 @@ Linux)
 esac
 
 export HISTFILESIZE=65535
-export PATH=$PATH_DARWIN:~/bin/:~/Dropbox/bin/:$PATH
+export PATH=$PATH_DARWIN:~/bin:~/local/bin:~/Dropbox/bin:$PATH
 export EDITOR=vim
 
 # prompt
@@ -43,6 +43,12 @@ else
 fi
 if [ "$TERM" != "dumb" ] && which dircolors > /dev/null; then
   alias ls='ls --color=auto'
+fi
+
+# phpenv
+if [ -d ~/.phpenv/bin ] ; then
+  export PATH=~/.phpenv/bin:$PATH
+  eval "$(phpenv init -)"
 fi
 
 # check the window size after each command and, if necessary,
