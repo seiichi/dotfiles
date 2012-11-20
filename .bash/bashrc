@@ -11,8 +11,12 @@ Linux)
   ;;
 esac
 
+if [ -r ~/Dropbox/DotFiles/bashrc ] ; then
+  . ~/Dropbox/DotFiles/bashrc
+fi
+
 export HISTFILESIZE=65535
-export PATH=$PATH_DARWIN:~/bin:~/local/bin:~/Dropbox/bin:$PATH
+export PATH=~/bin:~/Dropbox/bin:$PATH_DARWIN:$PATH
 export EDITOR=vim
 
 # prompt

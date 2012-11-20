@@ -2,7 +2,12 @@
 set nocompatible                  " be iMproved
 
 set history=256
-set clipboard+=unnamed            " yanks go on clipboard instead
+
+if $TMUX == ''
+  " http://stackoverflow.com/questions/11404800/fix-vim-tmux-yank-paste-on-unnamed-register
+  set clipboard+=unnamed          " yanks go on clipboard instead
+endif
+
 set title                         " title of the terminal window
 
 set nobackup
@@ -112,6 +117,9 @@ if exists('&colorcolumn')
 endif
 "}}}
 
+" key mapping {{{
+" toggle line numbering
+nmap <silent> <leader>n :set number! number?<CR>
 " reload firefox {{{
 if has('python')
   function! FirefoxReload()
@@ -142,6 +150,7 @@ if has('python')
   Bundle 'seiichi/nozbeadd.vim'
 endif
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'yuratomo/w3m.vim.git'
 
 filetype plugin indent on
 " }}}
@@ -149,7 +158,7 @@ filetype plugin indent on
 " appearance {{{
 if has('gui_macvim')
   set transparency=4
-  set guifont=Ricty\ Regular:h12
+  set guifont=Ricty\ Regular\ for\ Powerline:h12
 endif
 
 colorscheme solarized
@@ -157,5 +166,16 @@ if has('gui_running')
   set background=light
 else
   set background=dark
+endif
+" }}}
+
+let g:Powerline_symbols = 'fancy'
+
+" w3m.vim {{{
+if executable("/usr/bin/w3m")
+  let g:w3m#command = "/usr/bin/w3m"
+endif
+if executable("/usr/local/bin/w3m")
+  let g:w3m#command = "/usr/local/bin/w3m"
 endif
 " }}}
