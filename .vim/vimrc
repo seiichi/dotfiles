@@ -151,6 +151,7 @@ if has('python')
 endif
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'yuratomo/w3m.vim.git'
+Bundle 'tyru/open-browser.vim.git'
 
 filetype plugin indent on
 " }}}
@@ -178,4 +179,10 @@ endif
 if executable("/usr/local/bin/w3m")
   let g:w3m#command = "/usr/local/bin/w3m"
 endif
+" }}}
+
+" open-browser.vim {{{
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
 " }}}
