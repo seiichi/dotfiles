@@ -27,7 +27,7 @@ function _ps1_host {
     echo -e "\e[33m"
   fi
 }
-if [ "x$TERM" = xdumb ] ; then
+if [ "x$TERM" = xdumb ] -o [ "x$TERM" = xlinux ] ; then
   PS1='\u@\h:\w \$ '
   PROMPT_COMMAND=''
 else
