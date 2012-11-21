@@ -152,6 +152,7 @@ endif
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'yuratomo/w3m.vim.git'
 Bundle 'tyru/open-browser.vim.git'
+Bundle 'kakkyz81/evervim'
 
 filetype plugin indent on
 " }}}
