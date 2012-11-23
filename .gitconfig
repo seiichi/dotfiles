@@ -15,3 +15,5 @@
   # push
   pom = push origin master
 
+[color]
+	diff = auto
