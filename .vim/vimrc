@@ -153,6 +153,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'yuratomo/w3m.vim.git'
 Bundle 'tyru/open-browser.vim.git'
 Bundle 'kakkyz81/evervim'
+Bundle 'thinca/vim-ambicmd'
 
 filetype plugin indent on
 " }}}
@@ -186,4 +187,9 @@ endif
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
+" }}}
+
+" vim-ambicmd {{{
+cnoremap <expr> <Space> ambicmd#expand("\<Space>")
+cnoremap <expr> <CR>    ambicmd#expand("\<CR>")
 " }}}
