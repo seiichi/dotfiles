@@ -17,3 +17,5 @@
 
 [color]
 	diff = auto
+[pager]
+	diff = false
