@@ -101,14 +101,14 @@ set foldopen+=quickfix
 au FileType javascript set expandtab ts=4 sw=4 sts=4
 au FileType ruby set expandtab ts=2 sw=2 sts=2
 au FileType perl set expandtab ts=2 sw=2 sts=2
-au FileType python set expandtab ts=5 sw=4 sts=4
+au FileType python set expandtab ts=4 sw=4 sts=4
 au FileType sh set expandtab ts=2 sw=2 sts=2
 au FileType css set expandtab ts=2 sw=2 sts=2
 au FileType htmlcheetah set expandtab ts=2 sw=2 sts=2
 au FileType html set expandtab ts=2 sw=2 sts=2
 au FileType xhtml set expandtab ts=2 sw=2 sts=2
 au FileType vim set expandtab ts=2 sw=2 sts=2
-au FileType php set expandtab ts=4 sw=4 sts=4 " http://pear.php.net/manual/en/standards.indenting.php
+au FileType php set noexpandtab ts=8 ws=8 sts=8 " FuelPHP style
 
 " 80 column layout - http://vim-users.jp/2011/05/hack217/
 if exists('&colorcolumn')
