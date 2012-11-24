@@ -153,6 +153,9 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'yuratomo/w3m.vim.git'
 Bundle 'tyru/open-browser.vim.git'
 Bundle 'kakkyz81/evervim'
+if v:version < 703
+  Bundle 'tpope/vim-markdown'
+endif
 
 filetype plugin indent on
 " }}}
