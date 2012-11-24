@@ -58,7 +58,8 @@ nmap g# g#zz
 set encoding=utf-8
 set termencoding=utf-8
 set fileencodings=utf-8,iso-2022-jo,us_ascii,sjis,eus-jp
-set ambiwidth=double
+"set ambiwidth=double
+set ambiwidth=single
 "}}}
 
 " Visual {{{
