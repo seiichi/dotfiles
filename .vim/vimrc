@@ -125,8 +125,14 @@ nmap <silent> <leader>n :set number! number?<CR>
 if has('python')
   function! FirefoxReload()
 python << EOF
+import socket
 import telnetlib
-t = telnetlib.Telnet('localhost', 4242)
+hostname = socket.gethostname()
+if (hostname == 'tr808-squeeze' or hostname == 'tr909-squeeze'):
+  host = '192.168.56.1'
+else:
+  host = 'localhost'
+t = telnetlib.Telnet(host, 4242)
 t.read_until('repl>', 2)
 t.write('content.location.reload(true)\nrepl.quit()')
 t.close()
