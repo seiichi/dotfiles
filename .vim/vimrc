@@ -109,7 +109,7 @@ au FileType htmlcheetah set expandtab ts=2 sw=2 sts=2
 au FileType html set expandtab ts=2 sw=2 sts=2
 au FileType xhtml set expandtab ts=2 sw=2 sts=2
 au FileType vim set expandtab ts=2 sw=2 sts=2
-au FileType php set noexpandtab ts=8 ws=8 sts=8 " FuelPHP style
+au FileType php set noexpandtab ts=8 sw=8 sts=8 " FuelPHP style
 
 " 80 column layout - http://vim-users.jp/2011/05/hack217/
 if exists('&colorcolumn')
