@@ -129,7 +129,8 @@ import socket
 import telnetlib
 hostname = socket.gethostname()
 if (hostname == 'tr808-squeeze' or hostname == 'tr909-squeeze'):
-  host = '192.168.56.1'
+  # vim is running on vbox virtual machine
+  host = '192.168.56.1' # vboxnet0 interface
 else:
   host = 'localhost'
 t = telnetlib.Telnet(host, 4242)
