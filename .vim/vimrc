@@ -178,12 +178,7 @@ endif
 let g:Powerline_symbols = 'fancy'
 
 " w3m.vim {{{
-if executable("/usr/bin/w3m")
-  let g:w3m#command = "/usr/bin/w3m"
-endif
-if executable("/usr/local/bin/w3m")
-  let g:w3m#command = "/usr/local/bin/w3m"
-endif
+let g:w3m#command = "w3m"
 " }}}
 
 " open-browser.vim {{{
