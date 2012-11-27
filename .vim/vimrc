@@ -13,6 +13,8 @@ set title                         " title of the terminal window
 set nobackup
 set nowritebackup
 
+set cursorline
+
 set modeline
 set modelines=5
 
