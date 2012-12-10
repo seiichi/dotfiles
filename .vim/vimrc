@@ -167,6 +167,7 @@ if v:version < 703
   Bundle 'tpope/vim-markdown'
 endif
 Bundle 'thinca/vim-quickrun'
+Bundle 'TwitVim'
 
 filetype plugin indent on
 " }}}
@@ -205,3 +206,7 @@ let g:quickrun_config.markdown = {
 \ 'exec': '%c %s | w3m -T text/html'
 \}
 " }}}
+
+" TwitVim {{{
+let twitvim_enable_python = 1
+" }}}`
