@@ -123,7 +123,8 @@ endif
 " key mapping {{{
 " toggle line numbering
 nmap <silent> <leader>n :set number! number?<CR>
-" reload firefox {{{
+
+" reload firefox
 if has('python')
   function! FirefoxReload()
 python << EOF
@@ -143,6 +144,9 @@ EOF
   endfunction
   nmap <silent> <leader>r :call FirefoxReload()<CR>
 endif
+
+" run test
+nmap <silent> <leader>t :!kill -SIGUSR1 `cat /tmp/run-test.pid`<CR><CR>
 "}}}
 
 " Vundle {{{
