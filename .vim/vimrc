@@ -172,6 +172,7 @@ if v:version < 703
 endif
 Bundle 'thinca/vim-quickrun'
 Bundle 'TwitVim'
+Bundle 'BufOnly.vim'
 
 filetype plugin indent on
 " }}}
