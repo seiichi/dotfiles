@@ -35,7 +35,7 @@ else
   GIT_PS1_SHOWUPSTREAM=1
   GIT_PS1_SHOWUNTRACKEDFILES=1
   GIT_PS1_SHOWDIRTYSTATE=1
-  PS1='\u@\[$(_ps1_host)\]\h\[\e[m\]:\w $(__git_ps1 "(git:%s)")\n\[\e[37m\]\$\[\[\e[m\] '
+  PS1='\u@\[$(_ps1_host)\]\h\[\e[m\]:\[\e[37m\]\w\[\e[m\] $(__git_ps1 "(git:%s)")\n\[\e[37m\]\$\[\e[m\] '
 fi
 
 # color support of ls
