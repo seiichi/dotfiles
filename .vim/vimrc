@@ -147,7 +147,10 @@ endif
 
 " run test
 nmap <silent> <leader>t :!kill -SIGUSR1 `cat /tmp/run-test.pid`<CR><CR>
-"}}}
+
+" create tag file using ptags.py
+nmap <leader>p :! find -X . -name \*.py -print \| xargs ptags.py
+" }}}
 
 " Vundle {{{
 filetype off
