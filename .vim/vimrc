@@ -178,6 +178,7 @@ endif
 Bundle 'thinca/vim-quickrun'
 Bundle 'TwitVim'
 Bundle 'BufOnly.vim'
+Bundle 'scrooloose/syntastic.git'
 
 filetype plugin indent on
 " }}}
