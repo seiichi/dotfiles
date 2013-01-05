@@ -58,6 +58,12 @@ fi
 # pythonbrew
 [ -s ~/.pythonbrew/etc/bashrc ] && . ~/.pythonbrew/etc/bashrc
 
+# rbenv
+if which rbenv > /dev/null; then
+  eval "$(rbenv init -)";
+  export RBENV_ROOT=/usr/local/opt/rbenv  # homebrew
+fi
+
 # titanium
 export PATH=$PATH:/usr/local/share/npm/bin/
 
