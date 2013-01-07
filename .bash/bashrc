@@ -59,13 +59,17 @@ fi
 [ -s ~/.pythonbrew/etc/bashrc ] && . ~/.pythonbrew/etc/bashrc
 
 # rbenv
-if which rbenv > /dev/null; then
+if [ -d /usr/local/Cellar/rbenv ] ; then
   export RBENV_ROOT=/usr/local/opt/rbenv  # homebrew
+  eval "$(rbenv init -)";
+fi
+if [ -x ~/.rbenv/bin/rbenv ] ; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)";
 fi
 
 # titanium
-export PATH=$PATH:/usr/local/share/npm/bin/
+export PATH=$PATH:/usr/local/share/npm/bin
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
