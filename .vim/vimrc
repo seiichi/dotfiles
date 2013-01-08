@@ -115,7 +115,7 @@ au FileType php set noexpandtab ts=8 sw=8 sts=8 " FuelPHP style
 
 " 80 column layout - http://vim-users.jp/2011/05/hack217/
 if exists('&colorcolumn')
-  au FileType sh,c,python,javascript setlocal colorcolumn=+1 tw=80
+  au FileType sh,c,python,javascript,ruby setlocal colorcolumn=+1 tw=80
   au FileType help setlocal colorcolumn=+1 tw=78
 endif
 "}}}
