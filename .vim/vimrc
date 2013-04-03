@@ -24,6 +24,8 @@ let g:is_posix = 1                " to use modern shell
 let mapleader = ','
 
 set tags=./tags;$HOME
+
+set fileformats=unix,dos,mac
 " }}}
 
 " Formatting {{{
