@@ -47,6 +47,7 @@ else
 fi
 if [ "$TERM" != "dumb" ] && which dircolors > /dev/null; then
   alias ls='ls --color=auto'
+  alias grep='grep --color=auto'
 fi
 
 # phpenv
