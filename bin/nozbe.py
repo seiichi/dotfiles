@@ -22,8 +22,8 @@
 
 import os
 import sys
-import urllib
-import urllib2
+import urllib.request, urllib.parse, urllib.error
+import urllib.request, urllib.error, urllib.parse
 import json
 
 _BASE_URL = 'https://webapp.nozbe.com/api'
@@ -33,29 +33,29 @@ def apikey():
     return open(_API_KEY).read().strip()
 
 def add_new_action(key, name):
-    name = urllib.quote(name)
+    name = urllib.parse.quote(name)
     url = '%s/newaction/name-%s/what-next/key-%s' % (_BASE_URL, name, key)
     try:
-        u = urllib2.urlopen(url)
-        json.loads(u.read())
-    except urllib2.URLError, e:
-        print 'failed to access the server [%s]' % (e)
-    except ValueError, e:
-        print 'failed to add new action [%s]' % (e)
+        u = urllib.request.urlopen(url)
+        json.loads(u.read().decode())
+    except urllib.error.URLError as e:
+        print('failed to access the server [%s]' % (e))
+    except ValueError as e:
+        print('failed to add new action [%s]' % (e))
 
 def show_next_actions(key):
     url = '%s/actions/what-next/key-%s' % (_BASE_URL, key)
     try:
-        u = urllib2.urlopen(url)
-        actions = json.loads(u.read())
+        u = urllib.request.urlopen(url)
+        actions = json.loads(u.read().decode())
         for i, act in enumerate(actions):
             if act['done']:
                 continue
-            print act['name']
-    except urllib2.URLError, e:
-        print 'failed to access the server [%s]' % (e)
-    except ValueError, e:
-        print 'failed to get next actions [%s]' % (e)
+            print(act['name'])
+    except urllib.error.URLError as e:
+        print('failed to access the server [%s]' % (e))
+    except ValueError as e:
+        print('failed to get next actions [%s]' % (e))
 
 if __name__ == '__main__':
     key = apikey()
