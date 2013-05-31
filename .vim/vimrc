@@ -47,6 +47,7 @@ set cinwords+=for,switch,case
 " Search {{{
 set incsearch                     " incremental search
 set hlsearch                      " highlight search
+set ignorecase
 set smartcase                     " i don't like ignorecase
 
 " make search results appear in the middle of the screen
