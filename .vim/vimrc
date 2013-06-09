@@ -176,7 +176,6 @@ if v:version < 703
   Bundle 'tpope/vim-markdown'
 endif
 Bundle 'thinca/vim-quickrun'
-Bundle 'TwitVim'
 Bundle 'BufOnly.vim'
 Bundle 'scrooloose/syntastic.git'
 
