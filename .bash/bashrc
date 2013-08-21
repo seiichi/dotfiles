@@ -65,6 +65,13 @@ if [ -x ~/.rbenv/bin/rbenv ] ; then
 fi
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# node
+for d in /usr/local/lib/node_modules ; do
+  if [ -d $d ] ; then
+    export NODE_PATH=$NODE_PATH:$d
+  fi
+done
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
