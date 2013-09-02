@@ -175,6 +175,7 @@ endif
 Bundle 'thinca/vim-quickrun'
 Bundle 'BufOnly.vim'
 Bundle 'scrooloose/syntastic.git'
+Bundle 'freitass/todo.txt-vim'
 
 filetype plugin indent on
 " }}}
