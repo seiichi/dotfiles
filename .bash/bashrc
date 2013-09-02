@@ -75,3 +75,14 @@ done
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
+
+# todo.txt
+if command -v todo.sh > /dev/null ; then
+  if [ -f ~/Tools/todo.txt-cli/todo_completion ] ; then
+    . ~/Tools/todo.txt-cli/todo_completion
+    complete -F _todo t
+  fi
+  export TODOTXT_DEFAULT_ACTION=ls
+  alias t=todo.sh
+fi
+alias todo="vim ~/Dropbox/todo/todo.txt"
