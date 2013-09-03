@@ -178,6 +178,8 @@ Bundle 'scrooloose/syntastic.git'
 Bundle 'freitass/todo.txt-vim'
 
 filetype plugin indent on
+
+let g:vundle_default_git_proto = 'git'
 " }}}
 
 " appearance {{{
