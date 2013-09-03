@@ -73,9 +73,6 @@ syntax on
 set mouse=a
 set mousehide                     " hide mouse after chars typed
 
-"set number
-map <silent> <leader>N :set invnumber<CR>
-
 " list
 set list
 set listchars=tab:>-
@@ -124,8 +121,8 @@ endif
 "}}}
 
 " key mapping {{{
-" toggle line numbering
-nmap <silent> <leader>n :set number! number?<CR>
+"set number
+map <silent> <leader>n :set invnumber<CR>
 
 " reload firefox
 if has('python')
