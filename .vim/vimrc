@@ -215,6 +215,12 @@ let g:quickrun_config.markdown = {
 \}
 " }}}
 
-" TwitVim {{{
-let twitvim_enable_python = 1
-" }}}`
+" todo.txt-vim {{{
+highlight default link TodoDone      Comment
+highlight default link TodoPriorityA Type
+highlight default link TodoPriorityB Statement
+highlight default link TodoPriorityC Identifier
+highlight default link TodoDate      PreProc
+highlight default link TodoProject   Special
+highlight default link TodoContext   String
+" }}}
