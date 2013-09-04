@@ -3,10 +3,8 @@ set nocompatible                  " be iMproved
 
 set history=256
 
-if $TMUX == ''
-  " http://stackoverflow.com/questions/11404800/fix-vim-tmux-yank-paste-on-unnamed-register
-  set clipboard+=unnamed          " yanks go on clipboard instead
-endif
+set clipboard=unnamed             " use clipboard instead of register
+set clipboard+=autoselect         " use system native clipboard
 
 set title                         " title of the terminal window
 
