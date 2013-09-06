@@ -116,6 +116,9 @@ if exists('&colorcolumn')
   au FileType sh,c,python,javascript,ruby setlocal colorcolumn=+1 tw=80
   au FileType help setlocal colorcolumn=+1 tw=78
 endif
+
+autocmd BufRead,BufNewFile *.md  setfiletype markdown
+au FileType markdown set expandtab ts=4 sw=4 sts=4
 "}}}
 
 " key mapping {{{
