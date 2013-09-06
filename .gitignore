@@ -9,8 +9,12 @@
 !.tmux.conf
 !.todo.cfg
 !Tools/
+!.muttrc
+!.mutt/
 
 # ignore
 .vim/.netrwhist
 .vim/bundle
 .vim/plugin
+.mutt/cache
+.mutt/certificates

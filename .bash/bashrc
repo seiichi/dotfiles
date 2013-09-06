@@ -86,3 +86,6 @@ if command -v todo.sh > /dev/null ; then
   alias t=todo.sh
 fi
 alias todo="vim ~/Dropbox/todo/todo.txt"
+
+# mutt
+alias mutt="LC_MESSAGES=C mutt"
