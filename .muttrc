@@ -29,7 +29,7 @@ set sort		= threads
 set sort_aux		= last-date-received
 
 # use ASCII characters when displaying thread, instead of ACS
-set ascii_chars		= yes
+#set ascii_chars		= yes
 
 # Folder
 set folder		= imaps://imap.gmail.com:993
