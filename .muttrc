@@ -74,7 +74,7 @@ bind  editor <space> noop
 #bind  index,pager v  save-message	#Move to
 #macro index,pager I  <set-flag>O	"Mark as read"
 #macro index,pager U  <clear-flag>O	"Mark as unread"
-macro index,pager a  "<save-message>=[Gmail]/All Mail<enter><enter>" "Archive conversation"
+macro index,pager A  "<save-message>=[Gmail]/All Mail<enter><enter>" "Archive conversation"
 macro index,pager ga "<change-folder>=[Gmail]/All Mail<enter>"	"Go to all mail"
 macro index,pager gs <change-folder>=[Gmail]/Starred<enter>	"Go to 'Starred'"
 macro index,pager gd <change-folder>=[Gmail]/Drafts<enter>	"Go to 'Drafts'"
@@ -84,3 +84,8 @@ macro index,pager gt "<change-folder>=[Gmail]/Sent Mail<enter>"	"Go to 'Sent Mai
 folder-hook +INBOX 'macro index,pager y "<save-message>=[Gmail]/All Mail<enter><enter>" "Archive conversation"'
 folder-hook +[Gmail]/Trash macro index,pager y <save-message>=INBOX<enter><enter> "Move to inbox"
 #folder-hook +[Gmail]/Starred bind  index,pager y flag-message #"Toggle star"
+
+# goobook
+set query_command="goobook query '%s'"
+bind editor <Tab> complete-query
+macro index,pager a "<pipe-message>goobook add<return>" "add the sender address to Google contacts"
