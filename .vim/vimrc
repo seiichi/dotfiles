@@ -166,13 +166,14 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'yuratomo/w3m.vim.git'
 Bundle 'tyru/open-browser.vim.git'
-if v:version < 703
-  Bundle 'tpope/vim-markdown'
-endif
 Bundle 'thinca/vim-quickrun'
 Bundle 'BufOnly.vim'
 Bundle 'scrooloose/syntastic.git'
 Bundle 'freitass/todo.txt-vim'
+if v:version < 703
+  Bundle 'tpope/vim-markdown'
+endif
+Bundle 'joker1007/vim-markdown-quote-syntax'
 
 filetype plugin indent on
 
