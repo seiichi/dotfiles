@@ -210,8 +210,8 @@ vmap gx <Plug>(openbrowser-smart-search)
 silent! map <unique> <Leader>q <Plug>(quickrun)
 let g:quickrun_config = {}
 let g:quickrun_config.markdown = {
-\ 'command': 'markdown_py',
-\ 'exec': '%c %s | w3m -T text/html'
+\ 'command': 'markdown.js',
+\ 'exec': '%c < %s | html2text -nobs -style pretty -utf8'
 \}
 " }}}
 
