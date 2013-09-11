@@ -170,8 +170,9 @@ Bundle 'thinca/vim-quickrun'
 Bundle 'BufOnly.vim'
 Bundle 'scrooloose/syntastic.git'
 Bundle 'freitass/todo.txt-vim'
-Bundle 'joker1007/vim-markdown-quote-syntax'
 Bundle 'Markdown'
+Bundle 'joker1007/vim-markdown-quote-syntax'
+Bundle 'kannokanno/previm.git'
 
 filetype plugin indent on
 
