@@ -6,7 +6,15 @@ set history=256
 set clipboard=unnamed             " use clipboard instead of register
 set clipboard+=autoselect         " use system native clipboard
 
-set title                         " title of the terminal window
+" title of the terminal window
+let &titlestring="%t"."%( (%{expand(\"%:~:h\")})%)"."%( %a%r%m%)"
+if !has('gui_running')
+  let &t_ts = "\e]0;"
+  let &t_fs = "\007"
+endif
+if $PYENV_VERSION != "mutt"
+  set title
+endif
 
 set nobackup
 set nowritebackup

@@ -22,22 +22,21 @@ export PATH=~/bin:~/Dropbox/bin:~/local/bin:$PATH_DARWIN:$PATH
 export EDITOR=vim
 
 # prompt
-function _ps1_host {
-  if [ "x$SSH_TTY" = x ] ; then
-    echo ""
-  else
-    echo -e "\e[33m"
-  fi
-}
 if [ "x$TERM" = xdumb -o "x$TERM" = xlinux ] ; then
   PS1='\u@\h:\w \$ '
   PROMPT_COMMAND=''
 else
-  PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
+  if [ "x$SSH_TTY" = x ] ; then
+    PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
+    HOSTNAME_COLOR=37
+  else
+    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/#$HOME/~}\007"'
+    HOSTNAME_COLOR=33
+  fi
   GIT_PS1_SHOWUPSTREAM=1
   GIT_PS1_SHOWUNTRACKEDFILES=1
   GIT_PS1_SHOWDIRTYSTATE=1
-  PS1='\u@\[$(_ps1_host)\]\h\[\e[m\]:\[\e[37m\]\w\[\e[m\] $(__git_ps1 "(git:%s)")\n\[\e[37m\]\$\[\e[m\] '
+  PS1='\u@\[\e[${HOSTNAME_COLOR}m\]\h\[\e[m\]:\[\e[37m\]\w\[\e[m\] $(__git_ps1 "(git:%s)")\n\[\e[37m\]\$\[\e[m\] '
 fi
 
 # color support of ls
@@ -89,5 +88,10 @@ if command -v todo.sh > /dev/null ; then
 fi
 alias todo="vim ~/Dropbox/todo/todo.txt"
 
-# mutt
-alias mutt="LC_MESSAGES=C PYENV_VERSION=mutt mutt"
+# aliases
+function set_title()
+{
+  echo -ne "\033]0;$1\007"
+}
+alias mutt="set_title GMail; LC_MESSAGES=C PYENV_VERSION=mutt mutt"
+alias tw="set_title Twitter; tw"
