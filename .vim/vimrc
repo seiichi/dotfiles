@@ -32,6 +32,8 @@ let mapleader = ','
 set tags=./tags;$HOME
 
 set fileformats=unix,dos,mac
+
+set ttyfast
 " }}}
 
 " Formatting {{{
