@@ -7,7 +7,9 @@ set clipboard=unnamed             " use clipboard instead of register
 set clipboard+=autoselect         " use system native clipboard
 
 " title of the terminal window
-let &titlestring="%t"."%( (%{expand(\"%:~:h\")})%)"."%( %a%r%m%)"
+"let &titlestring="%t"."%( (%{expand(\"%:~:h\")})%)"."%( %a%r%m%)"
+let &titlestring="%t"."%( (%{expand(\"%:~:h\")})%)"
+let &titlestring="%t"."%( %a%r%m%)"
 if !has('gui_running')
   let &t_ts = "\e]0;"
   let &t_fs = "\007"
