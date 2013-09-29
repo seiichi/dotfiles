@@ -93,5 +93,5 @@ function set_title()
 {
   echo -ne "\033]0;$1\007"
 }
-alias mutt="set_title GMail; LC_MESSAGES=C PYENV_VERSION=mutt mutt"
+alias mutt="set_title GMail; LC_MESSAGES=C mutt"
 alias tw="set_title Twitter; tw"
