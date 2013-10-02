@@ -18,8 +18,10 @@ fi
 export HISTFILESIZE=65535
 export HISTSIZE=20000
 export HISTCONTROL=ignorespace
-export PATH=~/bin:~/Dropbox/bin:~/local/bin:$PATH_DARWIN:$PATH
+export PATH=$HOME/bin:$HOME/Dropbox/bin:$HOME/local/bin:$HOME/.local/bin:$PATH_DARWIN:$PATH
 export EDITOR=vim
+
+export LC_MESSAGES=en_US.utf8
 
 # prompt
 if [ "x$TERM" = xdumb -o "x$TERM" = xlinux ] ; then
