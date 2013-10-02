@@ -21,8 +21,6 @@ export HISTCONTROL=ignorespace
 export PATH=$HOME/bin:$HOME/Dropbox/bin:$HOME/local/bin:$HOME/.local/bin:$PATH_DARWIN:$PATH
 export EDITOR=vim
 
-export LC_MESSAGES=en_US.utf8
-
 # prompt
 if [ "x$TERM" = xdumb -o "x$TERM" = xlinux ] ; then
   PS1='\u@\h:\w \$ '
