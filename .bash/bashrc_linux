@@ -5,7 +5,7 @@ fi
 alias minicom='LANG=C minicom -w'
 
 if [ -e /usr/bin/vimx ] ; then
-  alias vim='vimx -v'
+  alias vim='LC_MESSAGES=en_US.utf8 vimx -v'
 fi
 
 # for gnome-terminal
