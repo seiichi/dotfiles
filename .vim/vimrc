@@ -3,7 +3,7 @@ set nocompatible                  " be iMproved
 
 set history=256
 
-set clipboard=unnamed             " use clipboard instead of register
+set clipboard=unnamedplus         " use clipboard instead of register
 set clipboard+=autoselect         " use system native clipboard
 
 " title of the terminal window
