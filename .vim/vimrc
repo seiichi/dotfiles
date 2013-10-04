@@ -233,6 +233,7 @@ highlight default link TodoDone      Comment
 highlight default link TodoPriorityA Type
 highlight default link TodoPriorityB Statement
 highlight default link TodoPriorityC Identifier
+highlight default link TodoPriorityZ Comment
 highlight default link TodoDate      PreProc
 highlight default link TodoProject   Special
 highlight default link TodoContext   String
