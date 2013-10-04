@@ -1,5 +1,10 @@
 source ~/Dropbox/DotFiles/muttrc
 
+set sendmail="/usr/local/bin/msmtp"
+
+# for sendmail
+set envelope_from=yes
+
 set editor = 'vim'
 
 # Don't let your firewall kill your idle connection.
