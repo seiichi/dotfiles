@@ -203,9 +203,11 @@ if has('gui_running')
 else
   set background=dark
 endif
-" }}}
 
-let g:Powerline_symbols = 'fancy'
+if $HOSTNAME != "tb303"
+  let g:Powerline_symbols = 'fancy'
+endif
+" }}}
 
 " w3m.vim {{{
 let g:w3m#command = "w3m"
