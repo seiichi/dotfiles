@@ -1,9 +1,7 @@
 source ~/Dropbox/DotFiles/muttrc
 
-set sendmail="/usr/local/bin/msmtp"
-
-# for sendmail
-set envelope_from=yes
+#set envelope_from=yes
+#set sendmail="msmtp"
 
 set editor = 'vim'
 
