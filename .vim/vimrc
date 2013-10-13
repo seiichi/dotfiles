@@ -185,6 +185,7 @@ Bundle 'Markdown'
 Bundle 'joker1007/vim-markdown-quote-syntax'
 Bundle 'kannokanno/previm.git'
 Bundle 'tpope/vim-fugitive'
+Bundle 'Glench/Vim-Jinja2-Syntax'
 
 filetype plugin indent on
 
