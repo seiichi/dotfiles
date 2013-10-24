@@ -15,9 +15,9 @@ if [ -r ~/Dropbox/DotFiles/bashrc ] ; then
   . ~/Dropbox/DotFiles/bashrc
 fi
 
-export HISTFILESIZE=65535
-export HISTSIZE=20000
-export HISTCONTROL=ignorespace
+export HISTFILESIZE=131071
+export HISTSIZE=65535
+export HISTCONTROL=ignoreboth # ignoredups and ignorespace
 export PATH=$HOME/bin:$HOME/Dropbox/bin:$HOME/local/bin:$HOME/.local/bin:$PATH_DARWIN:$PATH
 export EDITOR=vim
 
