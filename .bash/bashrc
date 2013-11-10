@@ -85,9 +85,9 @@ for d in /usr/local/lib/node_modules ; do
 done
 
 # ADT
-adt=$HOME/adt-bundle-linux-x86_64-20130917
+adt=$HOME/adt-bundle
 if [ -d $adt ] ; then
-export PATH=$PATH:$adt/sdk/platform-tools:$adt/sdk/tools
+  export PATH=$PATH:$adt/sdk/platform-tools:$adt/sdk/tools
 fi
 unset adt
 
