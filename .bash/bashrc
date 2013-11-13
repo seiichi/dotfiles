@@ -7,6 +7,10 @@ Darwin)
 Linux)
   . ~/.bash/bashrc_linux
   ;;
+MINGW32*)
+  . ~/.bash/bashrc_msys
+  dircolorsconf=$HOME/.bash/dircolors.256dark.msys
+  ;;
 *)
   ;;
 esac
@@ -18,7 +22,7 @@ fi
 export HISTFILESIZE=131071
 export HISTSIZE=65535
 export HISTCONTROL=ignoreboth # ignoredups and ignorespace
-export PATH=$HOME/bin:$HOME/Dropbox/bin:$HOME/local/bin:$HOME/.local/bin:$PATH_DARWIN:$PATH
+export PATH=$HOME/bin:$HOME/Dropbox/bin:$HOME/local/bin:$HOME/.local/bin:$PATH_DARWIN:$WIN_PATH:$PATH
 export EDITOR=vim
 
 # prompt
@@ -47,9 +51,12 @@ fi
 unset git_prompt
 
 # color support of ls
-if [ -r ~/.bash/dircolors.256dark ] ; then
+if [ "x$dircolorsconf" = x ] ; then
+  dircolorsconf=$HOME/.bash/dircolors.256dark
+fi
+if [ -r $dircolorsconf ] ; then
   # https://github.com/seebi/dircolors-solarized
-  eval "`dircolors ~/.bash/dircolors.256dark`"
+  eval "`dircolors $dircolorsconf`"
 else
   eval "`dircolors -b`"
 fi
@@ -85,9 +92,9 @@ for d in /usr/local/lib/node_modules $HOME/.local/lib/node_modules ; do
 done
 
 # ADT
-adt=$HOME/adt-bundle-linux-x86_64-20130917
+adt=$HOME/adt-bundle
 if [ -d $adt ] ; then
-export PATH=$PATH:$adt/sdk/platform-tools:$adt/sdk/tools
+  export PATH=$PATH:$adt/sdk/platform-tools:$adt/sdk/tools
 fi
 unset adt
 
