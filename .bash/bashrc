@@ -7,6 +7,10 @@ Darwin)
 Linux)
   . ~/.bash/bashrc_linux
   ;;
+MINGW32*)
+  . ~/.bash/bashrc_msys
+  dircolorsconf=$HOME/.bash/dircolors.256dark.msys
+  ;;
 *)
   ;;
 esac
@@ -47,9 +51,12 @@ fi
 unset git_prompt
 
 # color support of ls
-if [ -r ~/.bash/dircolors.256dark ] ; then
+if [ "x$dircolorsconf" = x ] ; then
+  dircolorsconf=$HOME/.bash/dircolors.256dark
+fi
+if [ -r $dircolorsconf ] ; then
   # https://github.com/seebi/dircolors-solarized
-  eval "`dircolors ~/.bash/dircolors.256dark`"
+  eval "`dircolors $dircolorsconf`"
 else
   eval "`dircolors -b`"
 fi

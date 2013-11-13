@@ -1,0 +1,9 @@
+if [ -f /c/Program\ Files\ \(x86\)/Git/etc/git-completion.bash ] ; then
+  . /c/Program\ Files\ \(x86\)/Git/etc/git-completion.bash
+fi
+
+if [ -f /c/Program\ Files\ \(x86\)/Git/etc/git-prompt.sh ] ; then
+  . /c/Program\ Files\ \(x86\)/Git/etc/git-prompt.sh
+fi
+
+export SHELL=/bin/bash
