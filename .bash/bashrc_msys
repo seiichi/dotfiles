@@ -6,4 +6,11 @@ if [ -f /c/Program\ Files\ \(x86\)/Git/etc/git-prompt.sh ] ; then
   . /c/Program\ Files\ \(x86\)/Git/etc/git-prompt.sh
 fi
 
+WIN_PATH=/c/Python27/:/c/Python27/Scripts
+
 export SHELL=/bin/bash
+
+alias git='console git'
+alias python='console python'
+
+# vim: ft=sh
