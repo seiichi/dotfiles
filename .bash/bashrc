@@ -78,7 +78,7 @@ fi
 if which pyenv > /dev/null 2>&1; then eval "$(pyenv init -)"; fi
 
 # node
-for d in /usr/local/lib/node_modules ; do
+for d in /usr/local/lib/node_modules $HOME/.local/lib/node_modules ; do
   if [ -d $d ] ; then
     export NODE_PATH=$NODE_PATH:$d
   fi
