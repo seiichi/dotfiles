@@ -77,6 +77,20 @@ set fileencodings=utf-8,iso-2022-jo,us_ascii,sjis,eus-jp
 set ambiwidth=single
 "}}}
 
+" Win32 {{{
+if has('win32')
+  set langmenu=en_US
+  let $LANG='en_US'
+  source $VIMRUNTIME/delmenu.vim
+  source $VIMRUNTIME/menu.vim
+  if has('gui_running')
+    set iminsert=0
+    set imsearch=0
+  endif
+  set shell=C:/MinGW/msys/1.0/bin/mintty.exe\ /bin/bash\ --login
+endif
+"}}}
+
 " Visual {{{
 syntax on
 
@@ -198,13 +212,13 @@ if has('gui_macvim')
   set transparency=4
   set guifont=Ricty\ Regular\ for\ Powerline:h12
 endif
+if has('gui_win32')
+  set guifont=Ricty_for_Powerline:h14
+  set linespace=0
+endif
 
 colorscheme solarized
-if has('gui_running')
-  set background=light
-else
-  set background=dark
-endif
+set background=dark
 
 if $HOSTNAME != "tb303"
   let g:Powerline_symbols = 'fancy'
