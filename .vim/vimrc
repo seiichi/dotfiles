@@ -92,7 +92,7 @@ if has('win32')
     set iminsert=0
     set imsearch=0
   endif
-  set shell=C:/MinGW/msys/1.0/bin/mintty.exe\ /bin/bash\ --login
+  "set shell=C:/MinGW/msys/1.0/bin/mintty.exe\ /bin/bash\ --login
 endif
 "}}}
 
@@ -206,6 +206,9 @@ Bundle 'joker1007/vim-markdown-quote-syntax'
 "Bundle 'kannokanno/previm.git'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Glench/Vim-Jinja2-Syntax'
+if has('win32')
+  Bundle 'istepura/vim-toolbar-icons-silk'
+endif
 
 filetype plugin indent on
 
