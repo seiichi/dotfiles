@@ -3,7 +3,12 @@ set nocompatible                  " be iMproved
 
 set history=256
 
-set clipboard=unnamedplus         " use clipboard instead of register
+" use clipboard instead of register
+if has('win32')
+  set clipboard=unnamed
+else
+  set clipboard=unnamedplus
+endif
 set clipboard+=autoselect         " use system native clipboard
 
 " title of the terminal window
