@@ -15,6 +15,7 @@ fi
 
 if [ "x$HOSTNAME" == xtb303 ] ; then
   export DISPLAY=:0
+  alias w3m='TERM=xterm w3m' # for mouse
 fi
 
 # vim: ft=sh
