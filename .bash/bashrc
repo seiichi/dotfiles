@@ -23,7 +23,9 @@ export HISTFILESIZE=131071
 export HISTSIZE=65535
 export HISTCONTROL=ignoreboth # ignoredups and ignorespace
 export PATH=$HOME/bin:$HOME/Dropbox/bin:$HOME/local/bin:$HOME/.local/bin:$PATH_DARWIN:$WIN_PATH:$PATH
-export EDITOR=vim
+if [ "x$EDITOR" = "x" ] ; then
+  export EDITOR=vim
+fi
 
 # prompt
 if [ "x$TERM" = xdumb -o "x$TERM" = xlinux ] ; then

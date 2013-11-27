@@ -9,8 +9,9 @@ fi
 WIN_PATH=/c/Python27/:/c/Python27/Scripts
 
 export SHELL=/bin/bash
+export EDITOR=gvim
 
-alias git='console git'
+#alias git='console git'
 alias python='console python'
 
 # vim: ft=sh
