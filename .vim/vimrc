@@ -130,7 +130,7 @@ set foldopen+=quickfix
 "}}}
 
 " FileType {{{
-au FileType javascript set expandtab ts=2 sw=2 sts=2
+au FileType javascript set expandtab ts=4 sw=4 sts=4
 au FileType ruby set expandtab ts=2 sw=2 sts=2
 au FileType eruby set expandtab ts=2 sw=2 sts=2
 au FileType perl set expandtab ts=2 sw=2 sts=2
