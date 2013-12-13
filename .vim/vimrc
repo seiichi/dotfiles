@@ -130,7 +130,7 @@ set foldopen+=quickfix
 "}}}
 
 " FileType {{{
-au FileType javascript set expandtab ts=4 sw=4 sts=4
+au FileType javascript set expandtab ts=2 sw=2 sts=2
 au FileType ruby set expandtab ts=2 sw=2 sts=2
 au FileType eruby set expandtab ts=2 sw=2 sts=2
 au FileType perl set expandtab ts=2 sw=2 sts=2
@@ -165,7 +165,7 @@ python << EOF
 import socket
 import telnetlib
 hostname = socket.gethostname()
-if (hostname == 'tr808-squeeze' or hostname == 'tr909-squeeze'):
+if (hostname == 'tr808-squeeze' or hostname == 'tr909-squeeze' or hostname == 'tb303'):
   # vim is running on vbox virtual machine
   host = '192.168.56.1' # vboxnet0 interface
 else:
