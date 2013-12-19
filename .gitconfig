@@ -1,8 +1,8 @@
 # vim: ts=2:sw=2:sts=2:et
 
 [user]
-	name = Seiichi SATO
-	email = seiichisato@gmail.com
+  name = Seiichi SATO
+  email = seiichisato@gmail.com
 
 [core]
   excludesfile = ~/.gitignore_global
@@ -11,17 +11,11 @@
   path = ~/.github
 
 [alias]
-
   # push
   pom = push origin master
 
 [color]
-	diff = auto
+  ui = auto
+
 [pager]
-	diff = false
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  diff = false
