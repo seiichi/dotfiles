@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import sys
+import codecs
 
 import misaka as m
 from jinja2 import Template
@@ -17,12 +18,13 @@ EXTENSIONS = m.EXT_NO_INTRA_EMPHASIS | \
 
 githubcss = 'https://gist.github.com/andyferra/2554919/raw/2e66cabdafe1c9a7f354aa2ebf5bc38265e638e5/github.css'
 
+sys.stdout = codecs.getwriter('utf8')(sys.stdout)
+sys.stdin = codecs.getreader('utf8')(sys.stdin)
+
 css = requests.get(githubcss).text
+html = m.html(sys.stdin.read(), extensions=EXTENSIONS)
 
-text = sys.stdin.read()
-html = m.html(text, extensions=EXTENSIONS)
-
-template = Template('''<!DOCTYPE html>
+template = Template(u'''<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
