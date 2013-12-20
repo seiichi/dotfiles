@@ -36,4 +36,4 @@ for err in soup.find_all('li', class_='msg_err'):
     pos = re.sub('(?ms)\s+', ' ', err.em.get_text())
     msg = err.find('span', class_='msg').get_text()
     code = err.find('pre').get_text()
-    print '\x1b[1m{0}\x1b[0m: {1}\n\x1b[34m{2}\x1b[0m'.format(pos, msg, code)
+    print(u'\x1b[1m{0}\x1b[0m: {1}\n\x1b[34m{2}\x1b[0m'.format(pos, msg, code))
