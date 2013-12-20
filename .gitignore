@@ -12,6 +12,7 @@
 !.muttrc
 !.mutt/
 !.gemrc
+!.jshintrc
 
 # ignore
 .vim/.netrwhist

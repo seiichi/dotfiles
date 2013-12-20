@@ -254,6 +254,10 @@ let g:quickrun_config.markdown = {
 \}
 " }}}
 
+" syntastic {{{
+let g:syntastic_javascript_jshint_conf="~/.jshintrc"
+" }}}
+
 " todo.txt-vim {{{
 highlight default link TodoDone      Comment
 highlight default link TodoPriorityA Type
