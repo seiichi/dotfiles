@@ -208,6 +208,7 @@ Bundle 'joker1007/vim-markdown-quote-syntax'
 "Bundle 'kannokanno/previm.git'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Glench/Vim-Jinja2-Syntax'
+Bundle 'elzr/vim-json'
 if has('win32')
   Bundle 'istepura/vim-toolbar-icons-silk'
 endif
