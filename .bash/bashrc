@@ -67,12 +67,6 @@ if [ "$TERM" != "dumb" ] && which dircolors > /dev/null; then
   alias grep='grep --color=auto'
 fi
 
-# phpenv
-if [ -d ~/.phpenv/bin ] ; then
-  export PATH=$PATH:~/.phpenv/bin
-  eval "$(phpenv init -)"
-fi
-
 # rbenv
 if [ -x ~/.rbenv/bin/rbenv ] ; then # manual install?
   export PATH="$HOME/.rbenv/bin:$PATH"
