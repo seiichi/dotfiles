@@ -9,8 +9,10 @@ from bs4 import BeautifulSoup
 
 html = io.open(sys.argv[1], 'r', encoding='utf8').read()
 
+rignore = re.compile(r'(?i)<meta\shttp-equiv="x-ua-compatible".+?>')
+
 payload = {
-    'fragment': html,
+    'fragment': rignore.sub('', html),
     'charset': 'utf-8',
     'doctype': 'HTML5',
     'group': 0,
