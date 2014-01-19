@@ -19,7 +19,10 @@ payload = {
     'user-agent': 'W3C_Validator/1.3 http://validator.w3.org/services',
 }
 
-r = requests.post('http://validator.w3.org/check', data=payload)
+for i in range(0, 3):
+    r = requests.post('http://validator.w3.org/check', data=payload)
+    if r.status_code is 200:
+        break
 
 soup = BeautifulSoup(r.text)
 title = soup.title.contents[0]
@@ -39,3 +42,6 @@ for err in soup.find_all('li', class_='msg_err'):
     msg = err.find('span', class_='msg').get_text()
     code = err.find('pre').get_text()
     print(u'\x1b[1m{0}\x1b[0m: {1}\n\x1b[34m{2}\x1b[0m'.format(pos, msg, code))
+
+if result != 'Valid':
+    sys.exit(result)
