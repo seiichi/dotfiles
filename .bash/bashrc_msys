@@ -12,6 +12,6 @@ export SHELL=/bin/bash
 export EDITOR=gvim
 
 #alias git='console git'
-alias python='console python'
+#alias python='console python'
 
 # vim: ft=sh
