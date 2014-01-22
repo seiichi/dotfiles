@@ -5,6 +5,6 @@ if [ "x$hostname" = xtb303 ] ; then
   if [ "x$TMUX" = x ] ; then
     ssh-agent tmux
   else
-     ssh-add -l || ssh-add
+     ssh-add -l > /dev/null || ssh-add
   fi
 fi
