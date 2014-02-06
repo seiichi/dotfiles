@@ -29,7 +29,11 @@ template = Template(u'''<!DOCTYPE html>
     <head>
         <meta charset="UTF-8">
         <style>{{ css }}</style>
+        <style>
+            ul :first-child, ol :first-child { margin-top: 15px; }
+        </style>
     </head>
-    <body>{{ body }}</body>
+    <body style="max-width:700px;margin:auto;">{{ body }}</body>
+
 </html>''')
 print(template.render(body=html, css=css))
