@@ -197,7 +197,6 @@ Bundle 'gmarik/vundle'
 " my bundles:
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'altercation/vim-colors-solarized'
-"Bundle 'yuratomo/w3m.vim.git'
 Bundle 'tyru/open-browser.vim.git'
 Bundle 'thinca/vim-quickrun'
 Bundle 'scrooloose/syntastic.git'
@@ -236,10 +235,6 @@ set background=dark
 if $HOSTNAME != "tb303"
   let g:Powerline_symbols = 'fancy'
 endif
-" }}}
-
-" w3m.vim {{{
-let g:w3m#command = "w3m"
 " }}}
 
 " open-browser.vim {{{
