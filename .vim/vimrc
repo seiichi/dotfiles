@@ -233,7 +233,7 @@ endif
 colorscheme solarized
 set background=dark
 
-if $HOSTNAME != "tb303"
+if $HOSTNAME != "tb303" && $HOSTNAME != "babylon"
   let g:Powerline_symbols = 'fancy'
 endif
 " }}}
