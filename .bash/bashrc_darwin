@@ -15,6 +15,12 @@ if [ -d `brew --prefix coreutils`/libexec/gnubin ]; then
   PATH_DARWIN="$(brew --prefix coreutils)/libexec/gnubin:$PATH_DARWIN"
 fi
 
+# gnu-tar
+if [ -d `brew --prefix gnu-tar`/libexec/gnubin ]; then
+  PATH_DARWIN="$(brew --prefix gnu-tar)/libexec/gnubin:$PATH_DARWIN"
+fi
+
+
 if which asciidoc > /dev/null && [ -d /usr/local/etc/xml/catalog ]; then
   export XML_CATALOG_FILES=/usr/local/etc/xml/catalog
 fi
@@ -24,7 +30,6 @@ if [ "$TERM" != "dumb" ] ; then
 else
   alias ls='gls'
 fi
-alias tar='gnutar'
 alias vim='mvim -v'
 alias vimdiff='mvimdiff -v'
 alias view='mview -v'
