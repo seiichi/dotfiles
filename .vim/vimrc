@@ -197,13 +197,15 @@ Bundle 'gmarik/vundle'
 " my bundles:
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'altercation/vim-colors-solarized'
-"Bundle 'yuratomo/w3m.vim.git'
 Bundle 'tyru/open-browser.vim.git'
 Bundle 'thinca/vim-quickrun'
 Bundle 'scrooloose/syntastic.git'
 Bundle 'freitass/todo.txt-vim'
-Bundle 'Markdown'
-Bundle 'joker1007/vim-markdown-quote-syntax'
+
+"Bundle 'Markdown'
+"Bundle 'joker1007/vim-markdown-quote-syntax'
+Bundle 'tpope/vim-markdown'
+
 "Bundle 'kannokanno/previm.git'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Glench/Vim-Jinja2-Syntax'
@@ -214,7 +216,7 @@ endif
 
 filetype plugin indent on
 
-let g:vundle_default_git_proto = 'git'
+"let g:vundle_default_git_proto = 'git'
 " }}}
 
 " appearance {{{
@@ -230,13 +232,9 @@ endif
 colorscheme solarized
 set background=dark
 
-if $HOSTNAME != "tb303"
+if $HOSTNAME != "tb303" && $HOSTNAME != "babylon"
   let g:Powerline_symbols = 'fancy'
 endif
-" }}}
-
-" w3m.vim {{{
-let g:w3m#command = "w3m"
 " }}}
 
 " open-browser.vim {{{
