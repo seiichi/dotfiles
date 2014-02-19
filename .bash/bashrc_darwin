@@ -35,4 +35,7 @@ alias vimdiff='mvimdiff -v'
 alias view='mview -v'
 alias gvim='mvim'
 
+# avoid "Too many open files" error of Python
+ulimit -n 1024
+
 # vim: ft=sh
