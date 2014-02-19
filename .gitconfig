@@ -11,8 +11,9 @@
   path = ~/.github
 
 [alias]
-  # push
   pom = push origin master
+  l = log --graph --decorate --oneline
+  dw = diff --color-words
 
 [color]
   ui = auto
