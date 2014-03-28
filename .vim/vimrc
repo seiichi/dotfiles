@@ -210,6 +210,8 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'elzr/vim-json'
+Bundle 'mustache/vim-mustache-handlebars'
+let g:mustache_abbreviations = 1
 if has('win32')
   Bundle 'istepura/vim-toolbar-icons-silk'
 endif
