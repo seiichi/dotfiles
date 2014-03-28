@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 
 html = io.open(sys.argv[1], 'r', encoding='utf8').read()
 
-rignore = re.compile(r'(?i)<meta\shttp-equiv="x-ua-compatible".+?>')
+rignore = re.compile(r'(?i)<meta\shttp-equiv="?x-ua-compatible"?.+?>')
 
 payload = {
     'fragment': rignore.sub('', html),
@@ -21,7 +21,7 @@ payload = {
 
 for i in range(0, 3):
     r = requests.post('http://validator.w3.org/check', data=payload)
-    if r.status_code is 200:
+    if r.status_code == 200:
         break
 
 soup = BeautifulSoup(r.text)
