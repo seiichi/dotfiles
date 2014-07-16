@@ -1,3 +1,0 @@
-text/html; lv -Ou8 %s | w3m -dump -T %t; copiousoutput
-image/*; open %s & sleep 3
-application/*; open %s & sleep 3
