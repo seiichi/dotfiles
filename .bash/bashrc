@@ -112,11 +112,3 @@ if command -v todo.sh > /dev/null ; then
   alias t=todo.sh
 fi
 alias todo="vim ~/Dropbox/todo/todo.txt"
-
-# aliases
-function set_title()
-{
-  echo -ne "\033]0;$1\007"
-}
-alias mutt="set_title GMail; LC_MESSAGES=C mutt"
-alias tw="set_title Twitter; tw"
