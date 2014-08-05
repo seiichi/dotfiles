@@ -197,7 +197,6 @@ Bundle 'gmarik/vundle'
 " my bundles:
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'tyru/open-browser.vim.git'
 Bundle 'thinca/vim-quickrun'
 Bundle 'scrooloose/syntastic.git'
 Bundle 'freitass/todo.txt-vim'
@@ -237,12 +236,6 @@ set background=dark
 if $HOSTNAME != "tb303" && $HOSTNAME != "hilite" && $HOSTNAME != "babylon"
   let g:Powerline_symbols = 'fancy'
 endif
-" }}}
-
-" open-browser.vim {{{
-let g:netrw_nogx = 1 " disable netrw's gx mapping.
-nmap gx <Plug>(openbrowser-smart-search)
-vmap gx <Plug>(openbrowser-smart-search)
 " }}}
 
 " vim-quickrun {{{
