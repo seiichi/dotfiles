@@ -157,27 +157,6 @@ endif
 "set number
 map <silent> <leader>n :set invnumber<CR>
 
-" reload firefox
-if has('python')
-  function! FirefoxReload()
-python << EOF
-import socket
-import telnetlib
-hostname = socket.gethostname()
-if (hostname == 'tr808-squeeze' or hostname == 'tr909-squeeze' or hostname == 'tb303'):
-  # vim is running on vbox virtual machine
-  host = '192.168.56.1' # vboxnet0 interface
-else:
-  host = 'localhost'
-t = telnetlib.Telnet(host, 4242)
-t.read_until('repl>', 2)
-t.write('content.location.reload(true)\nrepl.quit()')
-t.close()
-EOF
-  endfunction
-  nmap <silent> <leader>r :call FirefoxReload()<CR>
-endif
-
 " run test
 nmap <silent> <leader>t :!kill -SIGUSR1 `cat /tmp/run-test.pid`<CR><CR>
 
