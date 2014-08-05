@@ -1,7 +1,7 @@
 [ -f ~/.bash/bashrc ] && . ~/.bash/bashrc
 
 hostname=`hostname`
-if [ "x$hostname" = xtb303 ] ; then
+if [ "x$hostname" = xtb303 -o "x$hostname" = xhilite ] ; then
   if [ "x$TMUX" = x ] ; then
     ssh-agent tmux
   else
