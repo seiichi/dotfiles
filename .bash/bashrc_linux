@@ -18,7 +18,7 @@ if [ "x$TERM" == xxterm ]; then
   export TERM=xterm-256color
 fi
 
-if [ "x$HOSTNAME" == xtb303 ] ; then
+if [ "x$HOSTNAME" = xtb303 -o "x$HOSTNAME" = xhilite ] ; then
   export DISPLAY=:0
   alias w3m='TERM=xterm w3m' # for mouse
 fi
