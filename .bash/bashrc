@@ -7,10 +7,6 @@ Darwin)
 Linux)
   . ~/.bash/bashrc_linux
   ;;
-MINGW32*)
-  . ~/.bash/bashrc_msys
-  dircolorsconf=$HOME/.bash/dircolors.256dark.msys
-  ;;
 *)
   ;;
 esac
