@@ -4,12 +4,7 @@ set nocompatible                  " be iMproved
 set history=256
 
 " use clipboard instead of register
-if has('win32')
-  set clipboard=unnamed
-else
-  set clipboard=unnamedplus
-endif
-set clipboard+=autoselect         " use system native clipboard
+set clipboard=unnamedplus,autoselect         " use system native clipboard
 
 " title of the terminal window
 "let &titlestring="%t"."%( (%{expand(\"%:~:h\")})%)"."%( %a%r%m%)"
@@ -80,20 +75,6 @@ set termencoding=utf-8
 set fileencodings=utf-8,iso-2022-jo,us_ascii,sjis,eus-jp
 "set ambiwidth=double
 set ambiwidth=single
-"}}}
-
-" Win32 {{{
-if has('win32')
-  set langmenu=en_US
-  let $LANG='en_US'
-  source $VIMRUNTIME/delmenu.vim
-  source $VIMRUNTIME/menu.vim
-  if has('gui_running')
-    set iminsert=0
-    set imsearch=0
-  endif
-  "set shell=C:/MinGW/msys/1.0/bin/mintty.exe\ /bin/bash\ --login
-endif
 "}}}
 
 " Visual {{{
@@ -190,9 +171,6 @@ Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'elzr/vim-json'
 Bundle 'mustache/vim-mustache-handlebars'
 let g:mustache_abbreviations = 1
-if has('win32')
-  Bundle 'istepura/vim-toolbar-icons-silk'
-endif
 
 filetype plugin indent on
 
@@ -203,10 +181,6 @@ filetype plugin indent on
 if has('gui_macvim')
   set transparency=4
   set guifont=Ricty\ Regular\ for\ Powerline:h12
-endif
-if has('gui_win32')
-  set guifont=Ricty_for_Powerline:h11
-  "set linespace=0
 endif
 
 colorscheme solarized
