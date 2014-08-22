@@ -6,6 +6,7 @@
 
 [core]
   excludesfile = ~/.gitignore_global
+	pager = less
 
 [include]
   path = ~/.github
