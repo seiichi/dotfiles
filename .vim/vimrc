@@ -160,6 +160,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'thinca/vim-quickrun'
 Bundle 'scrooloose/syntastic.git'
 Bundle 'freitass/todo.txt-vim'
+Bundle 'skwp/vim-html-escape'
 
 "Bundle 'Markdown'
 "Bundle 'joker1007/vim-markdown-quote-syntax'
