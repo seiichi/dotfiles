@@ -202,7 +202,7 @@ let g:quickrun_config.markdown = {
 " }}}
 
 " syntastic {{{
-let g:syntastic_javascript_jshint_conf="~/.jshintrc"
+let g:syntastic_javascript_jshint_args = '--config ~/.jshintrc'
 " }}}
 
 " todo.txt-vim {{{
