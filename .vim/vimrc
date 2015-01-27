@@ -187,9 +187,7 @@ endif
 colorscheme solarized
 set background=dark
 
-if hostname() != "tb303" && hostname() != "hilite" && hostname() != "babylon"
-  let g:Powerline_symbols = 'fancy'
-endif
+let g:Powerline_symbols = 'fancy'
 " }}}
 
 " vim-quickrun {{{
