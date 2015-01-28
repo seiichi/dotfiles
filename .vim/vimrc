@@ -164,8 +164,6 @@ filetype plugin indent on
 " appearance {{{
 colorscheme solarized
 set background=dark
-
-let g:Powerline_symbols = 'fancy'
 " }}}
 
 " vim-quickrun {{{
