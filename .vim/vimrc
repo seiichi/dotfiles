@@ -93,11 +93,6 @@ map <silent> <leader>L :set invlist<CR>
 
 " status line
 set laststatus=2
-"set statusline=%<%f\              " custom statusline
-"set stl+=[%{&ff}]                 " show fileformat
-"set stl+=[%{&fileencoding}]       " show fileencoding
-"set stl+=%y%m%r%=
-"set stl+=%-14.(%l,%c%V%)\ %P
 "}}}
 
 " Folding {{{
@@ -144,7 +139,7 @@ call vundle#rc()
 Bundle 'gmarik/Vundle.vim'
 
 " my bundles:
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'bling/vim-airline'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'thinca/vim-quickrun'
 Bundle 'scrooloose/syntastic.git'
@@ -164,6 +159,18 @@ filetype plugin indent on
 " appearance {{{
 colorscheme solarized
 set background=dark
+" }}}
+
+" vim-airline {{{
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_symbols.linenr = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.paste = ''
+let g:airline_symbols.whitespace = ''
 " }}}
 
 " vim-quickrun {{{
