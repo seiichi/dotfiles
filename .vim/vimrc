@@ -150,11 +150,8 @@ Bundle 'thinca/vim-quickrun'
 Bundle 'scrooloose/syntastic.git'
 Bundle 'skwp/vim-html-escape'
 
-"Bundle 'Markdown'
-"Bundle 'joker1007/vim-markdown-quote-syntax'
 Bundle 'tpope/vim-markdown'
 
-"Bundle 'kannokanno/previm.git'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'elzr/vim-json'
@@ -162,8 +159,6 @@ Bundle 'mustache/vim-mustache-handlebars'
 let g:mustache_abbreviations = 1
 
 filetype plugin indent on
-
-"let g:vundle_default_git_proto = 'git'
 " }}}
 
 " appearance {{{
