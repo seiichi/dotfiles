@@ -170,11 +170,6 @@ let g:Powerline_symbols = 'fancy'
 
 " vim-quickrun {{{
 silent! map <unique> <Leader>q <Plug>(quickrun)
-let g:quickrun_config = {}
-let g:quickrun_config.markdown = {
-\ 'command': 'markdown.js',
-\ 'exec': '%c < %s | html2text -nobs -style pretty -utf8'
-\}
 " }}}
 
 " syntastic {{{
