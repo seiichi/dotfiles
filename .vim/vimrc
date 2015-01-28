@@ -134,17 +134,6 @@ if exists('&colorcolumn')
 endif
 "}}}
 
-" key mapping {{{
-"set number
-map <silent> <leader>n :set invnumber<CR>
-
-" run test
-nmap <silent> <leader>t :!kill -SIGUSR1 `cat /tmp/run-test.pid`<CR><CR>
-
-" create tag file using ptags.py
-nmap <leader>p :! find -X . -name \*.py -print \| xargs ptags.py
-" }}}
-
 " Vundle {{{
 filetype off
 
