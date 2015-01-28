@@ -54,7 +54,7 @@ unset git_prompt
 
 # color support of ls
 if [ "x$dircolorsconf" = x ] ; then
-  dircolorsconf=$HOME/.bash/dircolors.ansi-dark
+  dircolorsconf=$HOME/.bash/dircolors.256dark
 fi
 if [ -r $dircolorsconf ] ; then
   # https://github.com/seebi/dircolors-solarized
