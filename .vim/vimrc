@@ -162,11 +162,6 @@ filetype plugin indent on
 " }}}
 
 " appearance {{{
-if has('gui_macvim')
-  set transparency=4
-  set guifont=Ricty\ Regular\ for\ Powerline:h12
-endif
-
 colorscheme solarized
 set background=dark
 
