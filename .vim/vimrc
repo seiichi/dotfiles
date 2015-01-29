@@ -163,6 +163,7 @@ set background=dark
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
+let g:airline_theme='light'
 if hostname() == 'marlboro'
   let g:airline_left_sep = '>'
   let g:airline_right_sep = '<'
@@ -171,7 +172,6 @@ if hostname() == 'marlboro'
   let g:airline_symbols.paste = ''
   let g:airline_symbols.whitespace = ''
 else
-  let g:airline_theme='light'
   let g:airline_left_sep = '⮀'
   let g:airline_right_sep = '⮂'
   let g:airline_symbols.linenr = '⭡'
