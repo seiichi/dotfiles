@@ -21,3 +21,4 @@
 .mutt/cache
 .mutt/certificates
 bin/phantomjs
+bin/chromedriver
