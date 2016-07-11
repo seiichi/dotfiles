@@ -125,7 +125,7 @@ autocmd BufRead,BufNewFile *.md setfiletype markdown
 
 " 80 column layout - http://vim-users.jp/2011/05/hack217/
 if exists('&colorcolumn')
-  au FileType sh,c,python,javascript,ruby,scss setlocal colorcolumn=+1 tw=80
+  au FileType sh,c,python,javascript,ruby setlocal colorcolumn=+1 tw=80
   au FileType help setlocal colorcolumn=+1 tw=78
 endif
 "}}}
@@ -190,7 +190,7 @@ silent! map <unique> <Leader>q <Plug>(quickrun)
 " }}}
 
 " syntastic {{{
-let g:syntastic_javascript_checkers = ['jscs']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_always_populate_loc_list = 1
 "let g:syntastic_auto_loc_list = 1
 "let g:syntastic_check_on_open = 1
