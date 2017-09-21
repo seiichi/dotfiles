@@ -78,13 +78,6 @@ for d in /usr/local/lib/node_modules $HOME/.local/lib/node_modules ; do
   fi
 done
 
-# ADT
-adt=$HOME/adt-bundle
-if [ -d $adt ] ; then
-  export PATH=$PATH:$adt/sdk/platform-tools:$adt/sdk/tools
-fi
-unset adt
-
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
