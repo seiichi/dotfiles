@@ -64,12 +64,6 @@ if [ "$TERM" != "dumb" ] && which dircolors > /dev/null; then
   alias grep='grep --color=auto'
 fi
 
-# rbenv
-if [ -x ~/.rbenv/bin/rbenv ] ; then # manual install?
-  export PATH="$HOME/.rbenv/bin:$PATH"
-fi
-if which rbenv > /dev/null 2>&1; then eval "$(rbenv init -)"; fi
-
 # pyenv
 if [ -x $HOME/.pyenv/bin/pyenv ] ; then # manual install?
   export PYENV_ROOT="$HOME/.pyenv"
