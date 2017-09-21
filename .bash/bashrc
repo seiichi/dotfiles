@@ -11,10 +11,6 @@ Linux)
   ;;
 esac
 
-if [ -r ~/Dropbox/DotFiles/bashrc ] ; then
-  . ~/Dropbox/DotFiles/bashrc
-fi
-
 export HISTFILESIZE=131071
 export HISTSIZE=65535
 export HISTCONTROL=ignoreboth # ignoredups and ignorespace
