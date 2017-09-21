@@ -1,3 +1,0 @@
-[submodule "Tools/todo.txt-cli"]
-	path = Tools/todo.txt-cli
-	url = git@github.com:ginatrapani/todo.txt-cli.git

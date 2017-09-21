@@ -19,9 +19,6 @@ export HISTFILESIZE=131071
 export HISTSIZE=65535
 export HISTCONTROL=ignoreboth # ignoredups and ignorespace
 export PATH=$HOME/bin:$HOME/Dropbox/bin:$HOME/local/bin:$HOME/.local/bin:$PATH_DARWIN:$WIN_PATH:$PATH
-if [ "x$EDITOR" = "x" ] ; then
-  export EDITOR=vim
-fi
 
 # prompt
 if [ "x$TERM" = xdumb -o "x$TERM" = xlinux ] ; then
@@ -97,14 +94,3 @@ unset adt
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
-
-# todo.txt
-if command -v todo.sh > /dev/null ; then
-  if [ -f ~/Tools/todo.txt-cli/todo_completion ] ; then
-    . ~/Tools/todo.txt-cli/todo_completion
-    complete -F _todo t
-  fi
-  export TODOTXT_DEFAULT_ACTION=ls
-  alias t=todo.sh
-fi
-alias todo="vim ~/Dropbox/todo/todo.txt"

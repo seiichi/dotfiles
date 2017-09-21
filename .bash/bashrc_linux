@@ -9,10 +9,6 @@ fi
 
 alias minicom='LANG=C minicom -w'
 
-if [ -e /usr/bin/vimx ] ; then
-  alias vim='LC_MESSAGES=en_US.utf8 vimx -v'
-fi
-
 # for gnome-terminal
 if [ "x$TERM" == xxterm ]; then
   export TERM=xterm-256color
@@ -22,5 +18,3 @@ if [ "x$HOSTNAME" = xmarlboro -o "x$HOSTNAME" = xcamel ] ; then
   export DISPLAY=:0
   alias w3m='TERM=xterm w3m' # for mouse
 fi
-
-# vim: ft=sh
