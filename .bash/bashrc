@@ -31,15 +31,8 @@ else
   GIT_PS1_SHOWUPSTREAM=1
   GIT_PS1_SHOWUNTRACKEDFILES=1
   GIT_PS1_SHOWDIRTYSTATE=1
-  PS1='\u@\[\e[${HOSTNAME_COLOR}m\]\h\[\e[m\]:\[\e[37m\]\w\[\e[m\] $(__git_ps1 "(git:%s)")\n\[\e[37m\]\$\[\e[m\] '
+  PS1='\u@\[\e[${HOSTNAME_COLOR}m\]\h\[\e[m\]:\[\e[37m\]\w\[\e[m\] \n\[\e[37m\]\$\[\e[m\] '
 fi
-
-# https://bugzilla.redhat.com/show_bug.cgi?id=878428
-git_prompt=/usr/share/git-core/contrib/completion/git-prompt.sh
-if ! type __git_ps1 &>/dev/null && [[ -f $git_prompt ]]; then
-    source $git_prompt
-fi
-unset git_prompt
 
 # color support of ls
 if [ "x$dircolorsconf" = x ] ; then
