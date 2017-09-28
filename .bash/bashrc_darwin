@@ -21,3 +21,9 @@ fi
 
 # avoid "Too many open files" error of Python
 ulimit -n 1024
+
+# nvm installed from homebrew
+if [ -d ~/.nvm ] ; then
+  export NVM_DIR="$HOME/.nvm"
+  . "/usr/local/opt/nvm/nvm.sh"
+fi
