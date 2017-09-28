@@ -1,5 +1,7 @@
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
+# nvm installed from homebrew
+if [ -d ~/.nvm ] ; then
+  export NVM_DIR="$HOME/.nvm"
+  . "/usr/local/opt/nvm/nvm.sh"
 fi
 
 PATH_DARWIN=/usr/local/bin:/usr/local/sbin
@@ -13,17 +15,19 @@ if [ -d `brew --prefix gnu-tar`/libexec/gnubin ]; then
   PATH_DARWIN="$(brew --prefix gnu-tar)/libexec/gnubin:$PATH_DARWIN"
 fi
 
+# gnu-sed
+PATH_DARWIN="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH_DARWIN"
+
 if [ "$TERM" != "dumb" ] ; then
   alias ls='gls --color=auto'
 else
   alias ls='gls'
 fi
 
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+
 # avoid "Too many open files" error of Python
 ulimit -n 1024
 
-# nvm installed from homebrew
-if [ -d ~/.nvm ] ; then
-  export NVM_DIR="$HOME/.nvm"
-  . "/usr/local/opt/nvm/nvm.sh"
-fi
