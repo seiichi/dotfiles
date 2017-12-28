@@ -31,3 +31,7 @@ fi
 # avoid "Too many open files" error of Python
 ulimit -n 1024
 
+# https://github.com/facebook/react-native/issues/5668
+function ulimit() { builtin ulimit -n 1024; }
+export -f ulimit
+
