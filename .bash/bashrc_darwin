@@ -35,3 +35,6 @@ ulimit -n 1024
 function ulimit() { builtin ulimit -n 1024; }
 export -f ulimit
 
+# android SDK
+PATH_DARWIN=$PATH_DARWIN:$HOME/Library/Android/sdk/platform-tools/
+
