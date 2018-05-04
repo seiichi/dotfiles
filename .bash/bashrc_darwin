@@ -38,3 +38,6 @@ export -f ulimit
 # android SDK
 PATH_DARWIN=$PATH_DARWIN:$HOME/Library/Android/sdk/platform-tools/
 
+# Add Visual Studio Code (code)
+PATH_DARWIN="$PATH_DARWIN:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
