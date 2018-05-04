@@ -6,14 +6,11 @@ fi
 
 PATH_DARWIN=/usr/local/bin:/usr/local/sbin
 
-if [ -d `brew --prefix coreutils`/libexec/gnubin ]; then
-  PATH_DARWIN="$(brew --prefix coreutils)/libexec/gnubin:$PATH_DARWIN"
-fi
+# coreutils
+PATH_DARWIN="/usr/local/opt/coreutils/libexec/gnubin:$PATH_DARWIN"
 
 # gnu-tar
-if [ -d `brew --prefix gnu-tar`/libexec/gnubin ]; then
-  PATH_DARWIN="$(brew --prefix gnu-tar)/libexec/gnubin:$PATH_DARWIN"
-fi
+PATH_DARWIN="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH_DARWIN"
 
 # gnu-sed
 PATH_DARWIN="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH_DARWIN"
@@ -24,8 +21,8 @@ else
   alias ls='gls'
 fi
 
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
+if [ -f /usr/local/etc/bash_completion ]; then
+  . /usr/local/etc/bash_completion
 fi
 
 # avoid "Too many open files" error of Python
